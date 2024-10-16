@@ -1,0 +1,129 @@
+@import url(./reset.css);
+
+body {
+    background-color: hsl(0, 0%, 8%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    width: 100%;
+    height: 100vh;
+}
+
+main {
+    background-color: hsl(0, 0%, 12%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    width: 350px;
+    border-radius: 20px;
+    padding: 40px;
+}
+
+main img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+main .return-icon {
+    width: 26px;
+}
+
+main .return-icon:hover {
+    transform: scale(1.15);
+}
+
+.projects-card .header {
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.nav-projects {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.profile-card .name {
+    margin: 30px 0 7px;
+}
+
+.name, .city{
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+}
+
+.description {
+    margin: 30px 0;
+    font-weight: 200;
+}
+
+.city {
+    color: hsl(75, 94%, 57%);
+}
+
+.profile-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.profile-links a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: hsl(0, 0%, 20%);
+    width: 100%;
+    height: 40px;
+    font-weight: 600;
+    border-radius: 7px;
+    margin: 10px 0;
+}
+
+.project-links {
+    width: 100%;
+}
+
+.project-links .link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: hsl(0, 0%, 20%);
+    width: 100%;
+    height: 40px;
+    font-weight: 600;
+    border-radius: 7px;
+    margin: 10px 0;
+}
+
+.project-links .link.link.in-progress {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-links .link.link.in-progress p {
+    color: hsl(0, 100%, 50%);
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.link:hover {
+    background-color: hsl(75, 94%, 57%);
+    color: hsl(0, 0%, 8%);
+    font-weight: 900;
+    transform: scale(1.01);
+}
+
+.link.link.link.in-progress:hover {
+    background-color: hsl(36, 94%, 57%);
+}
+

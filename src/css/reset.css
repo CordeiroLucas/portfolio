@@ -1,0 +1,15 @@
+@import url(../../assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
+
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: 'Inter';
+    font-weight: 400;
+    text-decoration: none;
+    text-align: center;
+}
+
+p {
+    font-size: 14px;
+}

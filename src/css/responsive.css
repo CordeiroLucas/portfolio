@@ -1,0 +1,6 @@
+@media(max-width: 450px) {
+    main {
+        width: 80%;
+        padding: 5%;
+    }
+}
