@@ -105,12 +105,12 @@ main .return-icon:hover {
     margin: 10px 0;
 }
 
-.project-links .link.link.in-progress {
+.project-links .link.in-progress {
     display: flex;
     flex-direction: column;
 }
 
-.project-links .link.link.in-progress p {
+.project-links .link.in-progress p {
     color: hsl(0, 100%, 50%);
     text-transform: uppercase;
     font-weight: 900;
@@ -123,7 +123,7 @@ main .return-icon:hover {
     transform: scale(1.01);
 }
 
-.link.link.link.in-progress:hover {
+.link.in-progress:hover {
     background-color: hsl(36, 94%, 57%);
 }
 
