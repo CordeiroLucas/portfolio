@@ -254,6 +254,7 @@ h3 {
     background: linear-gradient(135deg, #f8fafc 0%, #94a3b8 50%, #f8fafc 100%);
     background-size: 200% auto;
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: shimmer 4s linear infinite;
 }
