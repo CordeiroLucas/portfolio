@@ -1,29 +1,120 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="stylesheet" href="../../src/css/style.css">
-    <link rel="stylesheet" href="../../src/css/responsive.css">
+    <meta name="description"
+        content="Projetos selecionados de Lucas Pacheco - Backend, Data Analytics e Automação em Python.">
 
-    <title>Meus Projetos | Lucas Pacheco</title>
+    <!-- Resource Hints -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="stylesheet" href="../../src/css/style.css">
+
+    <title>Projetos | Lucas Pacheco</title>
 </head>
+
 <body>
-    <main class="projects-card">
-        <div class="header">
-            <nav class="nav-projects">
-                <a href="https://cordeirolucas.github.io/portfolio/"><img class="return-icon" src="../../design/return-svgrepo-com.svg" alt="Retornar"></a>
-                <h2 class="name">Meus Projetos</h2>
-            </nav>
-            <p class="description">Alguns projetos de sites que já realizei</p>
-        </div>
-        <div class="project-links">
-            <a class="link" href="https://estocka-ai.vercel.app/" target="_blank">App Estocka-Ai</a>
-            <a class="link" href="https://cordeirolucas.github.io/projeto-spiderman/" target="_blank">Projeto Spiderman</a>
-            <a class="link" href="https://cordeirolucas.github.io/projeto-age-calculator/" target="_blank">Calculadora de Idade</a>
-            <a class="link" href="https://cordeirolucas.github.io/projeto-pokedevs/" target="_blank">Projeto Pokedevs</a>
-        </div>
-    </main>
+    <a href="#main" class="skip-link">Pular para o conteúdo</a>
+    <div class="container">
+        <main id="main">
+            <header class="reveal">
+                <a href="../../index.html" class="link"
+                    style="margin-bottom: var(--spacing-md); display: inline-block;">← Voltar</a>
+                <h1 class="hero-title text-metallic">Projetos<br>Selecionados</h1>
+                <p class="hero-subtitle">Explorações em Desenvolvimento Python, Data Analytics e Web Development</p>
+            </header>
+
+            <div class="project-list reveal" style="animation-delay: 0.2s;">
+
+                <!-- Eletroposto Analytics -->
+                <a href="https://ev-stations-analytics.onrender.com" class="project-item" target="_blank"
+                    rel="noopener noreferrer">
+                    <div class="project-header">
+                        <h2 class="project-name">EV Stations Analytics</h2>
+                        <span class="project-category">Data & Backend</span>
+                    </div>
+                    <p class="project-description">Dashboard analítico para gestão de eletropostos. Processa dados de
+                        transações para entregar métricas de faturamento, consumo e detecção de churn em tempo real.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Streamlit</span>
+                        <span class="tech-tag">Pandas</span>
+                        <span class="tech-tag">Plotly</span>
+                        <span class="tech-tag">Render</span>
+                    </div>
+                </a>
+                <!-- CV Generator -->
+                <a href="https://github.com/CordeiroLucas/cv-generator" class="project-item" target="_blank"
+                    rel="noopener noreferrer">
+                    <div class="project-header">
+                        <h2 class="project-name">AI Resume Optimizer</h2>
+                        <span class="project-category">Artificial Intelligence</span>
+                    </div>
+                    <p class="project-description">Gerador de currículos inteligente que utiliza IA para otimizar e
+                        personalizar experiências profissionais. Integrado com APIs de LLM para análise técnica e
+                        enriquecimento de perfil.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">OpenAI API</span>
+                        <span class="tech-tag">Streamlit</span>
+                        <span class="tech-tag">NLP</span>
+                        <span class="tech-tag">Render</span>
+                    </div>
+                </a>
+
+                <!-- Estocka-Ai -->
+                <a href="https://github.com/CordeiroLucas/estocka-ai" class="project-item" target="_blank"
+                    rel="noopener noreferrer">
+                    <div class="project-header">
+                        <h2 class="project-name">Estocka-Ai</h2>
+                        <span class="project-category">Full Stack</span>
+                    </div>
+                    <p class="project-description">Sistema de gerenciamento de estoque escalável com arquitetura
+                        robusta, validações de integridade e interface mobile-first para operações ágeis.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Django</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">Neon.tech</span>
+                        <span class="tech-tag">Vercel</span>
+                    </div>
+                </a>
+                <!-- Spider-Man Multiverse -->
+                <a href="https://github.com/CordeiroLucas/projeto-spiderman" class="project-item" target="_blank"
+                    rel="noopener noreferrer">
+                    <div class="project-header">
+                        <h2 class="project-name">Spider-Man Multiverse</h2>
+                        <span class="project-category">Frontend Experience</span>
+                    </div>
+                    <p class="project-description">Experiência visual imersiva explorando o multiverso do Homem-Aranha,
+                        com foco em design responsivo e interatividade fluida.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                </a>
+
+                <!-- Pokedevs -->
+                <a href="https://github.com/CordeiroLucas/projeto-pokedevs" class="project-item" target="_blank"
+                    rel="noopener noreferrer">
+                    <div class="project-header">
+                        <h2 class="project-name">Pokedevs</h2>
+                        <span class="project-category">Frontend</span>
+                    </div>
+                    <p class="project-description">Plataforma interativa para listagem e consulta de dados de Pokémons.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                </a>
+            </div>
+        </main>
+    </div>
 </body>
+
 </html>

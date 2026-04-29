@@ -1,129 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@400;600;700&display=swap');
 @import url(./reset.css);
 
-body {
-    background-color: hsl(0, 0%, 8%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+:root {
+    /* Colors - Metallic Premium Palette */
+    --bg-color: #0a0b0d;
+    --surface-color: #14161a;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --accent-silver: #cbd5e1;
+    --accent-slate: #8b9cb0;
+    /* Brilhando para contraste WCAG AA */
+    --border-color: rgba(203, 213, 225, 0.1);
 
-    width: 100%;
-    height: 100vh;
+    /* Typography */
+    --font-heading: 'Outfit', sans-serif;
+    --font-body: 'Inter', sans-serif;
+
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+    --spacing-xl: 8rem;
+
+    /* Transitions */
+    --transition-smooth: 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Animations */
+@keyframes shimmer {
+    0% {
+        background-position: -200% center;
+    }
+
+    100% {
+        background-position: 200% center;
+    }
+}
+
+@keyframes entranceFade {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.reveal {
+    animation: entranceFade 0.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Accessibility: Skip Link */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--text-primary);
+    color: var(--bg-color);
+    padding: 8px;
+    z-index: 100;
+    transition: top 0.3s;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Layout Containers */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
 }
 
 main {
-    background-color: hsl(0, 0%, 12%);
+    min-height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-
-    width: 350px;
-    border-radius: 20px;
-    padding: 40px;
-}
-
-main img {
-    width: 100px;
-    border-radius: 50%;
-}
-
-main .return-icon {
-    width: 26px;
-}
-
-main .return-icon:hover {
-    transform: scale(1.15);
-}
-
-.projects-card .header {
-    width: 100%;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
-}
-
-.nav-projects {
-    display: flex;
-    align-items: start;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.profile-card .name {
-    margin: 30px 0 7px;
-}
-
-.name, .city{
-    width: 100%;
+    /* Centralização horizontal */
     text-align: center;
-    font-weight: 600;
+    /* Centralização de texto */
+    padding: var(--spacing-xl) 0;
 }
 
-.description {
-    margin: 30px 0;
-    font-weight: 200;
+/* Typography Hierarchy */
+h1,
+h2,
+h3 {
+    font-family: var(--font-heading);
+    letter-spacing: -0.02em;
 }
 
-.city {
-    color: hsl(75, 94%, 57%);
+.hero-title {
+    font-size: clamp(3rem, 10vw, 6rem);
+    font-weight: 700;
+    line-height: 0.9;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-primary);
+}
+
+.hero-subtitle {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: var(--text-secondary);
+    max-width: 600px;
+    font-weight: 300;
+    margin: 0 auto;
+    /* Centraliza o bloco do subtítulo */
+}
+
+/* Components */
+.profile-card {
+    border: none;
+    background: transparent;
+    width: 100%;
 }
 
 .profile-links {
+    margin-top: var(--spacing-lg);
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
+    flex-direction: row;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
 }
 
-.profile-links a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    background-color: hsl(0, 0%, 20%);
-    width: 100%;
-    height: 40px;
+.link {
+    font-family: var(--font-heading);
     font-weight: 600;
-    border-radius: 7px;
-    margin: 10px 0;
-}
-
-.project-links {
-    width: 100%;
-}
-
-.project-links .link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    background-color: hsl(0, 0%, 20%);
-    width: 100%;
-    height: 40px;
-    font-weight: 600;
-    border-radius: 7px;
-    margin: 10px 0;
-}
-
-.project-links .link.in-progress {
-    display: flex;
-    flex-direction: column;
-}
-
-.project-links .link.in-progress p {
-    color: hsl(0, 100%, 50%);
     text-transform: uppercase;
-    font-weight: 900;
+    font-size: 0.875rem;
+    letter-spacing: 0.1em;
+    color: var(--text-secondary);
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 4px;
+    transition: var(--transition-smooth);
+}
+
+.link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--text-primary);
+    transition: var(--transition-smooth);
 }
 
 .link:hover {
-    background-color: hsl(75, 94%, 57%);
-    color: hsl(0, 0%, 8%);
-    font-weight: 900;
-    transform: scale(1.01);
+    color: var(--text-primary);
 }
 
-.link.in-progress:hover {
-    background-color: hsl(36, 94%, 57%);
+.link:hover::after {
+    width: 100%;
 }
 
+/* Projects List (Minimalist Typographic) */
+.project-list {
+    margin-top: var(--spacing-xl);
+    border-top: 1px solid var(--border-color);
+    width: 100%;
+}
+
+.project-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--spacing-md) 0;
+    border-bottom: 1px solid var(--border-color);
+    text-decoration: none;
+    transition: var(--transition-smooth);
+}
+
+.project-header {
+    display: flex;
+    flex-direction: column;
+    /* Empilhando para centralização mais elegante */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: var(--spacing-sm);
+}
+
+.project-name {
+    font-family: var(--font-heading);
+    font-size: clamp(1.25rem, 3vw, 2rem);
+    font-weight: 400;
+    color: var(--text-primary);
+}
+
+.project-category {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--accent-slate);
+    font-weight: 600;
+}
+
+.project-description {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    max-width: 800px;
+    margin-bottom: var(--spacing-sm);
+    font-weight: 300;
+}
+
+.project-tech {
+    display: flex;
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
+    justify-content: center;
+    /* Centraliza as tags */
+}
+
+.tech-tag {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent-silver);
+    background: rgba(203, 213, 225, 0.05);
+    padding: 2px 8px;
+    border-radius: 4px;
+    border: 1px solid rgba(203, 213, 225, 0.1);
+}
+
+.project-item:hover {
+    background-color: rgba(255, 255, 255, 0.02);
+    transform: scale(1.02);
+    /* Escala em vez de translação lateral para manter simetria */
+}
+
+.project-item:hover .project-name {
+    font-weight: 600;
+}
+
+/* Utility Classes */
+.text-metallic {
+    background: linear-gradient(135deg, #f8fafc 0%, #94a3b8 50%, #f8fafc 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 4s linear infinite;
+}
+
+/* Tech Stack Footer */
+.tech-stack-overview {
+    margin-top: var(--spacing-xl);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--border-color);
+}
+
+.tech-label {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    color: var(--accent-slate);
+    margin-bottom: var(--spacing-sm);
+    font-weight: 600;
+}
+
+.tech-icons {
+    display: flex;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+    justify-content: center;
+    /* Centraliza ícones da stack */
+}
+
+.tech-icons span {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    font-weight: 300;
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: var(--spacing-lg) 0;
+    }
+
+    .profile-links {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+}

@@ -1,28 +1,75 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Lucas Pacheco - Engenheiro de Software especializado em Python, Django e Data Analytics. Soluções de backend robustas com design minimalista.">
+    <meta name="keywords"
+        content="Lucas Pacheco, Engenheiro de Software, Python, Django, Data Analytics, Backend, Portfólio">
 
-  <link rel="stylesheet" href="./src/css/style.css">
-  <link rel="stylesheet" href="./src/css/responsive.css">
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Lucas Pacheco | Links e Projetos</title>
+    <!-- Resource Hints -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+    <!-- Open Graph -->
+    <meta property="og:title" content="Lucas Pacheco | Software Engineer">
+    <meta property="og:description" content="Engenheiro de Software especializado em Python e Backend.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://github.com/CordeiroLucas">
+
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+    <title>Lucas Pacheco | Software Engineer</title>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Lucas Pacheco",
+      "jobTitle": "Software Engineer",
+      "knowsAbout": ["Python", "Django", "Artificial Intelligence", "LLMs", "Backend Development", "Data Analytics"],
+      "url": "https://github.com/CordeiroLucas"
+    }
+    </script>
 </head>
+
 <body>
-  <main class="profile-card">
-    <img src="./assets/images/avatar-lucas.jpg" alt="Picture of Lucas">
-    <h1 class="name">Lucas Pacheco</h2>
-    <p class="city">Recife, Pernambuco</p>
-    <p class="description">"Estudante Front e Back-End no caminho para o Fullstack"</p>
-    <div class="profile-links">
-      <a class="link" href="https://github.com/CordeiroLucas" target="_blank">GitHub</a>
-      <a class="link" href="https://www.linkedin.com/in/lucasc-pacheco/" target="_blank">LinkedIn</a>
-      <a class="link" href="https://play.unity.com/en/user/19d3301e-c734-4e48-ba62-3d4f4954e036" target="_blank">Jogos Unity</a>
-      <a class="link" href="./src/pages/projetos.html">Meus Projetos</a>
+    <a href="#main" class="skip-link">Pular para o conteúdo</a>
+    <div class="container">
+        <main class="profile-card" id="main">
+            <header class="reveal">
+                <h1 class="hero-title text-metallic">Lucas<br>Pacheco</h1>
+                <p class="hero-subtitle">
+                    Engenheiro de Software graduado com foco em Desenvolvimento Python.
+                    Especializado em criar soluções de backend robustas, automação e análise de dados com uma estética
+                    minimalista.
+                </p>
+            </header>
+
+            <nav class="profile-links reveal" style="animation-delay: 0.2s;">
+                <a class="link" href="https://github.com/CordeiroLucas" target="_blank"
+                    rel="noopener noreferrer">GitHub</a>
+                <a class="link" href="https://www.linkedin.com/in/lucasc-pacheco/" target="_blank"
+                    rel="noopener noreferrer">LinkedIn</a>
+                <a class="link" href="https://play.unity.com/en/user/19d3301e-c734-4e48-ba62-3d4f4954e036"
+                    target="_blank" rel="noopener noreferrer">Unity Games</a>
+                <a class="link" href="./src/pages/projetos.html">Projetos Selecionados</a>
+            </nav>
+
+            <footer class="tech-stack-overview reveal" style="animation-delay: 0.4s;">
+                <p class="tech-label">Core Stack</p>
+                <div class="tech-icons">
+                    <span>Python</span>
+                    <span>Django</span>
+                    <span>AI & LLMs</span>
+                    <span>Data Analytics</span>
+                </div>
+            </footer>
+        </main>
     </div>
-  </main>
 </body>
+
 </html>

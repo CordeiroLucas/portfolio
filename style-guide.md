@@ -1,31 +1,16 @@
-# Front-end Style Guide
-
-## Layout
-
-The designs were created to the following widths:
-
-- Mobile: 375px
-- Desktop: 1440px
-
-> 💡 These are just the design sizes. Ensure content is responsive and meets WCAG requirements by testing the full range of screen sizes from 320px to large screens.
+# Design System: Minimalista Premium
 
 ## Colors
-
-- Green: hsl(75, 94%, 57%)
-
-- White: hsl(0, 0%, 100%)
-
-- Grey 700: hsl(0, 0%, 20%)
-- Grey 800: hsl(0, 0%, 12%)
-- Grey 900: hsl(0, 0%, 8%)
+- **Deep Lead (BG)**: `#0a0b0d`
+- **Surface**: `#14161a`
+- **Slate Silver (Text)**: `#94a3b8`
+- **Metallic Silver (Accent)**: `#cbd5e1`
+- **Off-White (Primary)**: `#f8fafc`
 
 ## Typography
+- **Headings**: `Outfit` (Weights: 400, 600, 700)
+- **Body**: `Inter` (Weights: 300, 400, 600)
 
-### Body Copy
-
-- Font size (paragraph): 14px
-
-### Font
-
-- Family: [Inter](https://fonts.google.com/specimen/Inter)
-- Weights: 400, 600, 700
+## Spacing System
+- **Base Unit**: `8px`
+- **Scale**: `xs: 8px`, `sm: 16px`, `md: 32px`, `lg: 64px`, `xl: 128px`
