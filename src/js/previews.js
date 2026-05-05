@@ -20,7 +20,7 @@
   function tryLoad(src) {
     return new Promise((resolve) => {
       const img = new Image();
-      img.onload  = () => resolve(src);   // retorna a src se ok
+      img.onload = () => resolve(src);   // retorna a src se ok
       img.onerror = () => resolve(null);  // retorna null se 404/erro
       img.src = src;
     });
@@ -49,10 +49,10 @@
     const slug = preview.dataset.slug;
     if (!slug) return;
 
-    const track       = preview.querySelector('.preview-track');
-    const btnPrev     = preview.querySelector('.preview-arrow--prev');
-    const btnNext     = preview.querySelector('.preview-arrow--next');
-    const dotsCont    = preview.querySelector('.preview-dots');
+    const track = preview.querySelector('.preview-track');
+    const btnPrev = preview.querySelector('.preview-arrow--prev');
+    const btnNext = preview.querySelector('.preview-arrow--next');
+    const dotsCont = preview.querySelector('.preview-dots');
     if (!track) return;
 
     // Sonda todas as imagens disponíveis para este projeto
@@ -110,7 +110,7 @@
     // Suporte a teclado
     preview.setAttribute('tabindex', '0');
     preview.addEventListener('keydown', (e) => {
-      if (e.key === 'ArrowLeft')  goTo(current - 1);
+      if (e.key === 'ArrowLeft') goTo(current - 1);
       if (e.key === 'ArrowRight') goTo(current + 1);
     });
   }
