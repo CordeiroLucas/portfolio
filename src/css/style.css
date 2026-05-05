@@ -239,6 +239,128 @@ h3 {
     border: 1px solid rgba(203, 213, 225, 0.1);
 }
 
+/* Project Preview — 16:9 Carousel */
+.project-preview {
+    width: 100%;
+    /* Controlado via data-preview-width no HTML → JS aplica inline style */
+    max-width: var(--preview-max-width, 720px);
+    aspect-ratio: 16 / 9;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    margin-bottom: var(--spacing-sm);
+    background: linear-gradient(
+        135deg,
+        rgba(203, 213, 225, 0.04) 0%,
+        rgba(139, 156, 176, 0.08) 50%,
+        rgba(203, 213, 225, 0.04) 100%
+    );
+    background-size: 200% 200%;
+    animation: gradientShift 6s ease infinite;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Sliding track that holds all slides */
+.preview-track {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.preview-track img {
+    min-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+    display: block;
+    opacity: 0.85;
+    transition: opacity var(--transition-smooth);
+}
+
+.project-item:hover .preview-track img {
+    opacity: 1;
+}
+
+/* Navigation arrows */
+.preview-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid rgba(203, 213, 225, 0.2);
+    background: rgba(10, 11, 13, 0.45);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: rgba(248, 250, 252, 0.75);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease, background 0.25s ease, color 0.25s ease;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.preview-arrow--prev { left: 12px; }
+.preview-arrow--next { right: 12px; }
+
+/* Garante que setas com [hidden] nunca vazem pelo hover */
+.preview-arrow[hidden],
+.preview-dots[hidden] {
+    display: none !important;
+}
+
+/* Show arrows on hover of the whole preview block */
+.project-preview:hover .preview-arrow {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.preview-arrow:hover {
+    background: rgba(10, 11, 13, 0.75);
+    color: #f8fafc;
+    border-color: rgba(203, 213, 225, 0.4);
+}
+
+/* Dot indicators */
+.preview-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 6px;
+    z-index: 3;
+}
+
+.preview-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: rgba(248, 250, 252, 0.3);
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    border: none;
+    padding: 0;
+    pointer-events: auto;
+}
+
+.preview-dot.is-active {
+    background: rgba(248, 250, 252, 0.9);
+    transform: scale(1.4);
+}
+
+@keyframes gradientShift {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
 .project-item:hover {
     background-color: rgba(255, 255, 255, 0.02);
     transform: scale(1.02);
